@@ -4,6 +4,11 @@ import Footer from '../Components/Footer';
 
 export default function Kontak({ contacts }) {
   const { footer } = usePage().props;
+  
+  // Debug: log footer data
+  console.log('Footer data:', footer);
+  console.log('Map embed URL:', footer?.map_embed_url);
+  
   // Group contacts by type for easier rendering
   const contactsMap = contacts.reduce((acc, contact) => {
     acc[contact.type] = contact;
